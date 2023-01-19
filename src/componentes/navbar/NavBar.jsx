@@ -11,17 +11,14 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { Link } from 'react-router-dom';
 import PainelIcon from '@mui/icons-material/Dashboard';
 import AgendaIcon from '@mui/icons-material/CalendarMonth';
 import ServicoIcon from '@mui/icons-material/DesignServices';
-import HojeIcon from '@mui/icons-material/WbSunny';
 import SemanaIcon from '@mui/icons-material/CalendarViewWeek';
 import Fire from '@mui/icons-material/LocalFireDepartment';
+import Alarme from '@mui/icons-material/AccessAlarm';
 import '@fontsource/roboto/500.css';
-
-
 
 
 const pages = ['Meu Painel', 'Agenda', 'Serviços'];
@@ -50,7 +47,7 @@ function NavBar() {
         <AppBar position="static" sx={{ bgcolor: 'black' }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <Fire sx={{ display: { xs: 'none', md: 'flex' , color:'red' }, mr: 1 }} />
+                    <Alarme sx={{ display: { xs: 'none', md: 'flex' , color:'red' }, mr: 1 }} />
                     <Typography
                         variant="h6"
                         noWrap
@@ -61,13 +58,13 @@ function NavBar() {
                             display: { xs: 'none', md: 'flex' },
                            // flexGrow: 1,
                             fontFamily: 'roboto',
-                            fontWeight: 700,
+                            fontWeight: 200,
                             letterSpacing: '.3rem',
                             color: '#fff',
                             textDecoration: 'none',
                         }}
                     >
-                       OpenMyDay
+                    Minha Agenda
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -112,7 +109,7 @@ function NavBar() {
 
                         </Menu>
                     </Box>
-                    <Fire sx={{ display: { xs: 'flex', md: 'none' , color:'red' }, mr: 1 }} />
+                    <Alarme sx={{ display: { xs: 'flex', md: 'none' , color:'red' }, mr: 1 }} />
                     <Typography
                         variant="h5"
                         noWrap
@@ -129,7 +126,7 @@ function NavBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        OpenMyDay
+                        Minha Agenda
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
@@ -153,7 +150,7 @@ function NavBar() {
                             <Link to="/dia" style={{ textDecoration: 'none' }}>
                                 <Button
                                     variant="contained"
-                                    startIcon={<HojeIcon />}
+                                    startIcon={<Fire />}
                                     size={'large'}
                                     sx={{ my: 2, color: 'white', bgcolor: 'black',  '&:hover': {
                                         backgroundColor: '#fff',

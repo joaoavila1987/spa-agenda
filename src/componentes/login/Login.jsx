@@ -8,10 +8,9 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-//import Logo from '../../assets/imagens/logo.jpg';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
-import Fire from '@mui/icons-material/LocalFireDepartment';
+import Alarme from '@mui/icons-material/AccessAlarm';
 import '@fontsource/roboto/500.css';
 
 function Copyright(props) {
@@ -92,7 +91,7 @@ export default function Acesso() {
                         }}
                     >
                         {/* <img width={'180'} className='imagemLogin' src={Logo} alt="Odon" /> */}
-                        <Fire sx={{ display: { xs: 'flex', md: 'flex' , color:'red', fontSize:'60' }, mr: 1 }} />
+                        <Alarme sx={{ display: { xs: 'flex', md: 'flex' , color:'red', fontSize:'60' }, mr: 1 }} />
                         <Typography
                         variant="h3"
                         noWrap
@@ -100,7 +99,7 @@ export default function Acesso() {
                         href="/"
                         sx={{
                             mr: 2,
-                            display: { xs: 'none', md: 'flex' },
+                            display: { xs: 'flex', md: 'flex' },
                             fontFamily: 'roboto',
                             fontWeight: 500,
                             letterSpacing: '.3rem',
@@ -108,7 +107,7 @@ export default function Acesso() {
                             textDecoration: 'none',
                         }}
                     >
-                       OpenMyDay
+                       Minha Agenda
                     </Typography>
                     <br />
                         <Typography component="h9" variant="h9">
