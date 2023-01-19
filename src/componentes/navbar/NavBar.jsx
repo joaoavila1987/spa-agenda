@@ -11,10 +11,13 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import {Link} from 'react-router-dom'
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+const pages = ['Meu Painel' , 'Agenda' ,'Serviços'];
+
+const settings = ['minha conta' , 'contato'];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -22,8 +25,7 @@ function NavBar() {
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
+  };const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
 
@@ -39,7 +41,7 @@ function NavBar() {
     <AppBar position="static" sx={{bgcolor:'black'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <CalendarMonthIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -92,9 +94,15 @@ function NavBar() {
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
+
+             <MenuItem>
+
+              
+            </MenuItem>
+
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <CalendarMonthIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -111,18 +119,29 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Agenda
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+
+           <MenuItem>
+
+
+           <Link to="/" >
+           <Button variant="contained" sx={{ my: 2, color: 'white', display: 'block', bgcolor:'black' }}>Meu Painel</Button>
+           </Link>
+
+           <Link to="/agenda">
+           <Button variant="contained" sx={{ my: 2, color: 'white', display: 'block', bgcolor:'black' }}>Agenda</Button>
+           </Link>
+
+           <Link to="/servicos">
+           <Button variant="contained" sx={{ my: 2, color: 'white', display: 'block', bgcolor:'black' }}>Serviços</Button>
+          </Link>
+
+
+
+            </MenuItem>
+
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

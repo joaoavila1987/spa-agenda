@@ -2,6 +2,8 @@ import React from "react";
 import {BrowserRouter, Route, Switch , Redirect } from 'react-router-dom';
 import Login from "../componentes/login/Login";
 import Painel from '../componentes/painel/Painel';
+import Agenda from '../componentes/agenda/Agenda';
+import Servicos from '../componentes/servicos/Servicos';
 
 const Routes = () => {
     return (
@@ -10,7 +12,8 @@ const Routes = () => {
 
             <Route exact path="/" component={Login} />
             <Route path="/painel" component={Painel} />
-
+            <Route path="/agenda" component={Agenda}/>
+            <Route path="/servicos" component={Servicos}/>
             <Redirect from="*" to="/" />
             
          </Switch>
