@@ -149,7 +149,7 @@ export default function Acesso() {
                                     boxShadow: 'none',
                                     color: '#000'
                                   },}}>
-                               Vamos la
+                             Entrar
                             </Button>
                             <Grid container>
                                 <Grid item xs>

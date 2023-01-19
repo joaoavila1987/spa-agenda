@@ -59,7 +59,7 @@ function NavBar() {
                            // flexGrow: 1,
                             fontFamily: 'roboto',
                             fontWeight: 200,
-                            letterSpacing: '.3rem',
+                            //letterSpacing: '.3rem',
                             color: '#fff',
                             textDecoration: 'none',
                         }}
@@ -120,8 +120,8 @@ function NavBar() {
                             display: { xs: 'flex', md: 'none' },
                             flexGrow: 1,
                             fontFamily: 'roboto',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
+                            fontWeight: 200,
+                           // letterSpacing: '.3rem',
                             color: '#fff',
                             textDecoration: 'none',
                         }}
