@@ -59,8 +59,6 @@ export default function Acesso() {
         setSenha(_senha);
     }
 
-    console.log(`email ${email} e senha ${senha}`)
-
     return (
         <ThemeProvider theme={theme}>
             <Grid container component="main" sx={{ height: '100vh' }}>

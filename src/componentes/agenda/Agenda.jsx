@@ -1,8 +1,8 @@
 import React from 'react'
 import NavBar from '../navbar/NavBar';
-import Calendario from './Calendario';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import AgendaCalendario from './AgendaCalendario';
 
 export default function Agenda() {
   return (
@@ -12,7 +12,7 @@ export default function Agenda() {
       <br/>
       <Grid container justifyContent={'center'}>
         <Box sx={{width :'1200px'}}>
-          <Calendario />
+          <AgendaCalendario />
         </Box>
       </Grid>
 
