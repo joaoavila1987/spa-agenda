@@ -4,6 +4,8 @@ import Login from "../componentes/login/Login";
 import Painel from '../componentes/painel/Painel';
 import Agenda from '../componentes/agenda/Agenda';
 import Servicos from '../componentes/servicos/Servicos';
+import MinhaSemana from "../componentes/minhaSemana/MinhaSemana";
+import Dia from "../componentes/dia/Dia";
 
 const Routes = () => {
     return (
@@ -12,6 +14,8 @@ const Routes = () => {
 
             <Route exact path="/" component={Login} />
             <Route path="/painel" component={Painel} />
+            <Route path="/dia" component={Dia} />
+            <Route path="/semana" component={MinhaSemana} />
             <Route path="/agenda" component={Agenda}/>
             <Route path="/servicos" component={Servicos}/>
             <Redirect from="*" to="/" />

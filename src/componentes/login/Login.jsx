@@ -11,13 +11,15 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 //import Logo from '../../assets/imagens/logo.jpg';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
+import Fire from '@mui/icons-material/LocalFireDepartment';
+import '@fontsource/roboto/500.css';
 
 function Copyright(props) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
             {'Copyright © '}
             <Link color="inherit" href="http://localhost:3000/">
-                Odon Sistemas
+               SeA - Cloud
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -44,7 +46,7 @@ export default function Acesso() {
         event.preventDefault();
 
         if (email === 'joaoavila.py@gmail.com' && senha === 'avila1334') {
-            navigate.push('/home');
+            navigate.push('/painel');
         }
     };
 
@@ -90,8 +92,27 @@ export default function Acesso() {
                         }}
                     >
                         {/* <img width={'180'} className='imagemLogin' src={Logo} alt="Odon" /> */}
-                        <Typography component="h2" variant="h6">
-                            Entre na sua conta
+                        <Fire sx={{ display: { xs: 'flex', md: 'flex' , color:'red', fontSize:'60' }, mr: 1 }} />
+                        <Typography
+                        variant="h3"
+                        noWrap
+                        component="a"
+                        href="/"
+                        sx={{
+                            mr: 2,
+                            display: { xs: 'none', md: 'flex' },
+                            fontFamily: 'roboto',
+                            fontWeight: 500,
+                            letterSpacing: '.3rem',
+                            color: '#000',
+                            textDecoration: 'none',
+                        }}
+                    >
+                       OpenMyDay
+                    </Typography>
+                    <br />
+                        <Typography component="h9" variant="h9">
+                            Entre com a sua conta
                         </Typography>
                         <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
                             <TextField
@@ -123,9 +144,13 @@ export default function Acesso() {
                                 fullWidth
                                 variant="contained"
                                 onClick={(e) => handleSubmit(e)}
-                                sx={{ mt: 3, mb: 2 , bgcolor:'black' }}
-                            >
-                                Entrar
+                                sx={{ my: 2, color: 'white', bgcolor: 'black',  '&:hover': {
+                                    backgroundColor: '#ccc',
+                                    borderColor: '#fff',
+                                    boxShadow: 'none',
+                                    color: '#000'
+                                  },}}>
+                               Vamos la
                             </Button>
                             <Grid container>
                                 <Grid item xs>
