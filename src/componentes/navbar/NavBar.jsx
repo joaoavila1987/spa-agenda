@@ -21,10 +21,6 @@ import Alarme from '@mui/icons-material/AccessAlarm';
 import '@fontsource/roboto/500.css';
 
 
-const pages = ['Meu Painel', 'Agenda', 'Serviços'];
-
-const settings = ['Minha conta', 'Configurações', 'Sair'];
-
 function NavBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -96,15 +92,35 @@ function NavBar() {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
-                                </MenuItem>
-                            ))}
+     
+                            <MenuItem>
+                            <Link to="/painel" style={{ textDecoration: 'none' }}>
+                            <Typography textAlign="center" sx={{ color : 'black'}}>Meu Painel</Typography>
+                            </Link>
+                            </MenuItem>
 
                             <MenuItem>
+                            <Link to="/dia" style={{ textDecoration: 'none' }}>
+                            <Typography textAlign="center" sx={{ color : 'black'}}>Hoje</Typography>
+                            </Link>
+                            </MenuItem>
 
+                            <MenuItem>
+                            <Link to="/semana" style={{ textDecoration: 'none' }}>
+                            <Typography textAlign="center" sx={{ color : 'black'}} >Minha Semana</Typography>
+                            </Link>
+                            </MenuItem>
 
+                            <MenuItem>
+                            <Link to="/agenda" style={{ textDecoration: 'none' }}>
+                            <Typography textAlign="center" sx={{ color : 'black'}} >Agenda</Typography>
+                            </Link>
+                            </MenuItem>
+
+                              <MenuItem>
+                            <Link to="/servicos" style={{ textDecoration: 'none' }}>
+                            <Typography textAlign="center" sx={{ color : 'black'}} >Serviços</Typography>
+                            </Link>
                             </MenuItem>
 
                         </Menu>
@@ -232,11 +248,25 @@ function NavBar() {
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
-                            ))}
+                         
+                            <MenuItem>
+                            <Link to="/minha-conta" style={{ textDecoration: 'none' }}>
+                            <Typography textAlign="center" sx={{ color : 'black'}}>Minha Conta</Typography>
+                            </Link>
+                            </MenuItem>
+
+                            <MenuItem>
+                            <Link to="/configuracoes" style={{ textDecoration: 'none' }}>
+                            <Typography textAlign="center" sx={{ color : 'black'}}>Configurações</Typography>
+                            </Link>
+                            </MenuItem>
+
+                            <MenuItem>
+                            <Link to="/" style={{ textDecoration: 'none' }}>
+                            <Typography textAlign="center" sx={{ color : 'black'}} >Sair</Typography>
+                            </Link>
+                            </MenuItem>
+                         
                         </Menu>
                     </Box>
                 </Toolbar>
