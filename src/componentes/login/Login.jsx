@@ -18,7 +18,7 @@ function Copyright(props) {
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
             {'Copyright © '}
             <Link color="inherit" href="http://localhost:3000/">
-               SeA - Cloud
+                SeA - Cloud
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -69,7 +69,7 @@ export default function Acesso() {
                     sm={4}
                     md={7}
                     sx={{
-                       backgroundImage: 'url(https://source.unsplash.com/random)',
+                        backgroundImage: 'url(https://source.unsplash.com/random)',
                         //backgroundImage: `url(${ImagemDentista})`,
                         backgroundRepeat: 'no-repeat',
                         backgroundColor: (t) =>
@@ -89,25 +89,25 @@ export default function Acesso() {
                         }}
                     >
                         {/* <img width={'180'} className='imagemLogin' src={Logo} alt="Odon" /> */}
-                        <Alarme sx={{ display: { xs: 'flex', md: 'flex' , color:'red', fontSize:'60' }, mr: 1 }} />
+                        <Alarme sx={{ display: { xs: 'flex', md: 'flex', color: 'red', fontSize: '60' }, mr: 1 }} />
                         <Typography
-                        variant="h3"
-                        noWrap
-                        component="a"
-                        href="/"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'flex', md: 'flex' },
-                            fontFamily: 'roboto',
-                            fontWeight: 500,
-                            letterSpacing: '.3rem',
-                            color: '#000',
-                            textDecoration: 'none',
-                        }}
-                    >
-                       Minha Agenda
-                    </Typography>
-                    <br />
+                            variant="h3"
+                            noWrap
+                            component="a"
+                            href="/"
+                            sx={{
+                                mr: 2,
+                                display: { xs: 'flex', md: 'flex' },
+                                fontFamily: 'roboto',
+                                fontWeight: 500,
+                                letterSpacing: '.3rem',
+                                color: '#000',
+                                textDecoration: 'none',
+                            }}
+                        >
+                            Minha Agenda
+                        </Typography>
+                        <br />
                         <Typography component="h9" variant="h9">
                             Entre com a sua conta
                         </Typography>
@@ -132,7 +132,7 @@ export default function Acesso() {
                                 type="password"
                                 id="senha"
                                 autoComplete="current-password"
-                                sx={{bgcolor:'witer' , borderColor : 'black' }}
+                                sx={{ bgcolor: 'witer', borderColor: 'black' }}
                                 onChange={(e) => handleSenha(e)}
                             />
 
@@ -141,22 +141,24 @@ export default function Acesso() {
                                 fullWidth
                                 variant="contained"
                                 onClick={(e) => handleSubmit(e)}
-                                sx={{ my: 2, color: 'white', bgcolor: 'black',  '&:hover': {
-                                    backgroundColor: '#ccc',
-                                    borderColor: '#fff',
-                                    boxShadow: 'none',
-                                    color: '#000'
-                                  },}}>
-                             Entrar
+                                sx={{
+                                    my: 2, color: 'white', bgcolor: 'black', '&:hover': {
+                                        backgroundColor: '#ccc',
+                                        borderColor: '#fff',
+                                        boxShadow: 'none',
+                                        color: '#000'
+                                    },
+                                }}>
+                                Entrar
                             </Button>
                             <Grid container>
                                 <Grid item xs>
-                                    <Link href="#" variant="body2" sx={{color : 'black'}}>
+                                    <Link href="#" variant="body2" sx={{ color: 'black' }}>
                                         Esqueci a minha senha?
                                     </Link>
                                 </Grid>
                                 <Grid item>
-                                    <Link href="#" variant="body2" sx={{color : 'black'}}>
+                                    <Link href="#" variant="body2" sx={{ color: 'black' }}>
                                         {"Não tem uma conta ? Cadastre-se aqui"}
                                     </Link>
                                 </Grid>
