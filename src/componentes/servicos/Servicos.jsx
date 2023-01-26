@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
 //import Box from '@mui/material/Box';
+import Tabela from './TabelaServico';
 
 export default function Servicos() {
   return (
@@ -21,14 +22,9 @@ export default function Servicos() {
       <br />
       <Grid container justifyContent={'center'} spacing={3} xs={12} md={12} >
 
-        <Grid item  xs={12} md={8}>
+        <Grid item xs={12} md={8}>
           <TextField fullWidth size='large' label="Descrição do serviço" />
         </Grid>
-      
-        {/* <Grid item xs={12} md={3}>
-     <TextField fullWidth size='large' label="Valor"  />
-    </Grid> */}
-
         <Grid item>
           <Button
             variant="contained"
@@ -45,7 +41,9 @@ export default function Servicos() {
           </Button>
         </Grid>
       </Grid>
-
+      <Grid container justifyContent={'center'}>
+        <Tabela />
+      </Grid>
     </>
   )
 }
