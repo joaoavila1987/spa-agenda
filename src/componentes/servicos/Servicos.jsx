@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
-//import Box from '@mui/material/Box';
+import Box from '@mui/material/Box';
 import Tabela from './TabelaServico';
 
 export default function Servicos() {
@@ -38,14 +38,19 @@ export default function Servicos() {
             }}
             startIcon={<AddIcon />}>
             Adicionar
-          </Button>         
+          </Button>
         </Grid>
-
       </Grid>
-      <br/>
+      <br />
       <Grid container justifyContent={'center'}>
-        <Tabela />
+        <Box sx={{ width: '60%' }}>
+          <Tabela />
+        </Box>
       </Grid>
+      <br />
+      <br />
+      <br />
+      <br />
     </>
   )
 }
