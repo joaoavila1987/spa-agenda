@@ -38,9 +38,11 @@ export default function Servicos() {
             }}
             startIcon={<AddIcon />}>
             Adicionar
-          </Button>
+          </Button>         
         </Grid>
+
       </Grid>
+      <br/>
       <Grid container justifyContent={'center'}>
         <Tabela />
       </Grid>
