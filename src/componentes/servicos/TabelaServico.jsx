@@ -33,27 +33,27 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 const servico = [
   {
-    id : '01',
+    id: '01',
     descricao: 'Corte de Cabelo'
   },
   {
-    id : '02',
+    id: '02',
     descricao: 'Corte de Barba'
   },
   {
-    id : '03',
+    id: '03',
     descricao: 'Hidratação'
   },
   {
-    id : '04',
+    id: '04',
     descricao: 'Corte Ifantil'
   },
   {
-    id : '05',
+    id: '05',
     descricao: 'Tratamento de Calvice'
   },
   {
-    id : '06',
+    id: '06',
     descricao: 'Tratamento'
   }
 ]
@@ -79,12 +79,12 @@ export default function TabelaServico() {
               <StyledTableCell align="left">{row.descricao}</StyledTableCell>
               <StyledTableCell align="center">
 
-              <IconButton aria-label="editar">
+                <IconButton aria-label="editar">
                   <DeleteIcon />
                 </IconButton>
 
               </StyledTableCell>
-              
+
 
             </StyledTableRow>
           ))}
