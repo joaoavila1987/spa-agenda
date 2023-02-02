@@ -8,8 +8,7 @@ import { useContext } from 'react';
 
 export default function Agendador() {
 
-    const { openModalAgendador, setOpenModalAgendador  } = useContext(MyContext);
-   // const { showLoading, setShowLoading } = useContext(MyContext);
+    const { openModalAgendador, setOpenModalAgendador } = useContext(MyContext);
 
     const handleOpen = () => setOpenModalAgendador(true);
 
