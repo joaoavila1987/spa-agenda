@@ -3,34 +3,16 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { useContext } from 'react';
 import { MyContext } from '../../context/MyContext';
-// import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-// import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-// import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
-// import 'dayjs/locale/pt-br';
+import { useContext } from 'react';
 
 export default function Agendador() {
 
-//     <Grid item>
-//     <Box sx={{ width: '250px' }} xs={12} md={2}>
-//         <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale={locale}>
-//             <DesktopDatePicker
-//                 label="Data de Nascimento"
-//                 inputFormat="DD/MM/YYYY"
-//                 value={this.state.contato.Aniversario}
-//                 onChange={e => this.handleAniversario(e)}
-//                 renderInput={(params) => <TextField {...params} />}
-//             />
-//         </LocalizationProvider>
-//     </Box>
-//     <br />
-// </Grid>
-
-
-    const [openModalAgendador, setOpenModalAgendador] = useContext(MyContext);
+    const { openModalAgendador, setOpenModalAgendador  } = useContext(MyContext);
+   // const { showLoading, setShowLoading } = useContext(MyContext);
 
     const handleOpen = () => setOpenModalAgendador(true);
+
     const handleClose = () => setOpenModalAgendador(false);
 
     const style = {
@@ -56,7 +38,7 @@ export default function Agendador() {
                         boxShadow: 'none',
                         color: '#000'
                     },
-                }}>Criar Agendamento</Button>
+                }}>Novo Agendamento</Button>
             <Modal
                 open={openModalAgendador}
                 onClose={handleClose}

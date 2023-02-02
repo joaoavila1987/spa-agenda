@@ -20,7 +20,7 @@ export default function Servicos() {
       </Grid>
       <br />
       <br />
-      <Grid container justifyContent={'center'} spacing={3} xs={12} md={12} >
+      <Grid container justifyContent={'center'} spacing={3}>
 
         <Grid item xs={12} md={8}>
           <TextField fullWidth size='large' label="Descrição do serviço" />

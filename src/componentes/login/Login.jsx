@@ -108,7 +108,7 @@ export default function Acesso() {
                             Minha Agenda
                         </Typography>
                         <br />
-                        <Typography component="h9" variant="h9">
+                        <Typography component="h6" variant="h6">
                             Entre com a sua conta
                         </Typography>
                         <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>

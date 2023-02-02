@@ -13,7 +13,7 @@ export default function Agenda() {
       <br />
       <br />
       <Grid container justifyContent={'center'}>
-        {/* <Agendador /> */}
+        <Agendador />
       </Grid>
       <br />
       <Grid container justifyContent={'center'}>
