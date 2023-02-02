@@ -105,7 +105,7 @@ export default function Acesso() {
                                 textDecoration: 'none',
                             }}
                         >
-                            Minha Agenda
+                            Agenda
                         </Typography>
                         <br />
                         <Typography component="h6" variant="h6">
