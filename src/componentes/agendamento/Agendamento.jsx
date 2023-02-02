@@ -2,7 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+import { DesktopDateTimePicker } from '@mui/x-date-pickers/DesktopDateTimePicker';
+
 import 'dayjs/locale/pt-br';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -20,16 +21,18 @@ export default function Agendamento() {
         setData(_data);
     }
 
-
     return (
         <>
             <Grid container justifyContent={'center'} spacing={4}>
+
                 <Grid item>
                     <TextField fullWidth label="Nome" id="fullWidth" />
                 </Grid>
+
                 <Grid item>
                     <TextField fullWidth label="Telefone" id="fullWidth" />
                 </Grid>
+
                 <Grid item>
                     <TextField fullWidth label="email" id="fullWidth" />
                 </Grid>
@@ -37,15 +40,16 @@ export default function Agendamento() {
                 <Grid item>
                     <Box sx={{ width: '250px' }} xs={12} md={2}>
                         <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale={locale}>
-                            <DesktopDatePicker
+                        <DesktopDateTimePicker
                                 label="Data"
-                                inputFormat="DD/MM/YYYY"
+                                //inputFormat="DD/MM/YYYY"
                                 value={data}
                                 onChange={e => handleData(e)}
                                 renderInput={(params) => <TextField {...params} />}
                             />
                         </LocalizationProvider>
-                    </Box>
+                            
+                    </Box>  
                     <br />
                 </Grid>
 

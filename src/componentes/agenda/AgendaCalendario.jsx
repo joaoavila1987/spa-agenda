@@ -5,7 +5,6 @@ import interactionPlugin from "@fullcalendar/interaction" // needed for dayClick
 
 export default function AgendaCalendario() {
 
-
     const handleDate = (event) => {
         console.log('dados -> ', event)
     }
