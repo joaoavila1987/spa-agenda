@@ -12,6 +12,7 @@ import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import Alarme from '@mui/icons-material/AccessAlarm';
 import '@fontsource/roboto/500.css';
+import ImagemLateral from '../../assets/imagens/imagem_login.jpg';
 
 function Copyright(props) {
     return (
@@ -69,8 +70,8 @@ export default function Acesso() {
                     sm={4}
                     md={7}
                     sx={{
-                        backgroundImage: 'url(https://source.unsplash.com/random)',
-                        //backgroundImage: `url(${ImagemDentista})`,
+                        //backgroundImage: 'url(https://source.unsplash.com/random)',
+                        backgroundImage: `url(${ImagemLateral})`,
                         backgroundRepeat: 'no-repeat',
                         backgroundColor: (t) =>
                             t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
