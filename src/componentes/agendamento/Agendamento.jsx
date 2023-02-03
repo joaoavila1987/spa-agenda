@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import MenuItem from '@mui/material/MenuItem';
 
 export default function Agendamento() {
 
@@ -26,6 +27,15 @@ export default function Agendamento() {
 
     }
 
+    const servico = [
+ {value : '0' , label : 'Corte de Cabelo' },
+ {value : '1' , label : 'Corte de Barba'},
+ {value : '2' , label : 'Hidratação'},
+ {value : '3' , label : 'Corte Infantil'},
+ {value : '4' , label : 'Tratamento de Calvice'},
+ {value : '5' , label : 'Tratamento'}
+ ]
+
     //colocar um select para que seja adicionada o tipo de serviço 
 
     return (
@@ -33,17 +43,35 @@ export default function Agendamento() {
             <Grid container maxWidth={'1000px'}>
                 <Grid container spacing={4} justifyContent={'center'}>
                     <Grid item >
-                        <Box sx={{ width: '450px' }}>
+                        <Box sx={{ width: '300px' }}>
                             <TextField fullWidth label="Nome" id="fullWidth" />
                         </Box>
                     </Grid>
 
                     <Grid item >
-                        <Box sx={{ width: '250px' }}>
+                        <Box sx={{ width: '200px' }}>
                             <TextField fullWidth label="Telefone" id="fullWidth" />
                         </Box>
-                        <br />
+                       
                     </Grid>
+                       <Grid item>
+            <Box sx={{ width: '300px' }}>
+                       <TextField
+              fullWidth
+              id="grupo"
+              select
+              label="Tipo de Serviços"
+              defaultValue="N"
+            >
+          {servico.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+            </Box>
+             <br />
+          </Grid>
                 </Grid>
                 <Grid container justifyContent={'center'} spacing={4}>
                     <Grid item>
