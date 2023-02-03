@@ -26,6 +26,8 @@ export default function Agendamento() {
 
     }
 
+    //colocar um select para que seja adicionada o tipo de serviço 
+
     return (
         <>
             <Grid container maxWidth={'1000px'}>

@@ -29,7 +29,7 @@ export default function Servicos() {
           <Button
             variant="contained"
             sx={{
-              my: 2, color: 'white', bgcolor: 'black', '&:hover': {
+              my: 2, color: 'white', bgcolor: 'black',height: '55px',bottom:'15px' , '&:hover': {
                 backgroundColor: '#ccc',
                 borderColor: '#ccc',
                 boxShadow: 'none',
