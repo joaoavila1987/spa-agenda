@@ -72,11 +72,12 @@ export default function Agendamento() {
                             variant="contained"
                             onClick={(e) => handleMarcarCliente(e)}
                             sx={{
-                                my: 2, color: 'white', bgcolor: 'black', '&:hover': {
+                                my: 2, color: 'white', bgcolor: 'black',height: '55px',bottom:'15px' , '&:hover': {
                                     backgroundColor: '#ccc',
                                     borderColor: '#fff',
                                     boxShadow: 'none',
-                                    color: '#000'
+                                    color: '#000',
+                                    
                                 },
                             }}>
                             Agendar Cliente
