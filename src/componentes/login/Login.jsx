@@ -14,6 +14,7 @@ import Alarme from '@mui/icons-material/AccessAlarm';
 import '@fontsource/roboto/500.css';
 import ImagemLateral from '../../assets/imagens/imagem_login.jpg';
 
+
 function Copyright(props) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
